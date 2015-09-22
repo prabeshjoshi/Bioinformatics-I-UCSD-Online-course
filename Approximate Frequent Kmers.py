@@ -40,10 +40,9 @@ def approx_frequent_words(text,k,d):
         if count[i] == max_count:
             frequent_patterns.append(text[i:i+k])
             
-    unique = []
-    [unique.append(item) for item in frequent_patterns if item not in unique]
-    
-    #return unique    
+    unique = list(set(frequent_patterns))
+
+    #return unique   ## if needed 
     return (frequent_patterns)
         
             
